@@ -3,30 +3,32 @@ package com.song.app.entity;
 import java.util.Date;
 
 public class Notice {
-	private int id;
+	private String id;
 	private String title;
-	private String write_id;
+	private String writer_id;
 	private Date regdate;
 	private String content;
 	private int hit;
+	private String files;
 	
 	public Notice() {
 	}
 
 	//	매개변수로 들어감
-	public Notice(int id, String title, String write_id, Date regdate, String content, int hit) {
+	public Notice(String id, String title, String writer_id, Date regdate, String content, int hit, String files) {
 		this.id = id;
 		this.title = title;
-		this.write_id = write_id;
+		this.writer_id = writer_id;
 		this.regdate = regdate;
 		this.content = content;
 		this.hit = hit;
+		this.files = files;
 	}
 	
-	public int getId() {
+	public String getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	public String getTitle() {
@@ -35,11 +37,11 @@ public class Notice {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public String getWrite_id() {
-		return write_id;
+	public String getWriter_id() {
+		return writer_id;
 	}
-	public void setWrite_id(String write_id) {
-		this.write_id = write_id;
+	public void setWriter_id(String write_id) {
+		this.writer_id = write_id;
 	}
 	public Date getRegdate() {
 		return regdate;
@@ -59,5 +61,15 @@ public class Notice {
 	public void setHit(int hit) {
 		this.hit = hit;
 	}
+
+	public String getFiles() {
+		return files;
+	}
+
+	public void setFiles(String files) {
+		this.files = files;
+	}
+
+	
 	
 }
